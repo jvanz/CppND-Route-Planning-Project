@@ -57,6 +57,14 @@ int main(int argc, const char **argv)
     std::cin >> start_x >> start_y;
     std::cout << "Now, informa the end point (x y): ";
     std::cin >> end_x >> end_y;
+
+   if( start_x < 0 || start_x > 100 ||
+       start_y < 0 || start_y > 100 ||
+       end_x < 0 || end_x > 100 ||
+       end_y < 0 || end_y > 100) {
+       std::cout << "Invalid points. Please, insert values between 0 and 100" << std::endl;
+       return -1;
+   }
    
 
     // Build Model.
